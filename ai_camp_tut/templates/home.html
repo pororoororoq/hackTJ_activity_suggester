@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/home.css">
+    <link rel="stylesheet" href="/static/slides.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <script src='home.js'></script>
+    <header>
+      <section class="grouptop">
+      <nav>
+        <form action="/" class="inline">
+          <button onclick="" id="Start">Start</button><br></form>
+        <form action="/contacts" class="inline">
+          <button id="Contact">Contact</button><br></form>
+      </nav>
+        <div class="hero-text">
+          <section class="titlebox">
+          <h1>Activity Suggester</h1>
+          <p>Suggestions based on temperature, humidity, precipitation, etc.</p>
+          </section>
+          <br>
+          <br>
+          <br>
+        </section>
+          <hr>
+        </div>
+    </header>
+      <div class="container">
+        <br>
+        <br>
+        <h2>Weather</h2>
+        <div class="row">
+          <div class="col">
+            <i class="fa-solid fa-sun"></i>
+            <h3>Temperature</h3>
+            <h4>The current temperature (F) is : <span class="bolded">{{ temp }}</span> degrees.</h4>
+          </div>
+          <div class="col">
+            <i class="fa-solid fa-glass-water-droplet"></i>
+            <h3>Humidity</h3>
+            <h4>The current humidity (%) is : <span class="bolded">{{ humidity }}%</span>.</h4>
+          </div>
+          <div class="col">
+            <i class="fa-solid fa-wind"></i>
+            <h3>Wind Speed</h3>
+            <h4>The current wind speed (mph) is : <span class="bolded">{{ wind_speed }}</span> mph.</h4>
+          </div>
+          <br>
+          <hr>
+          <br>
+          <div class="col">
+            <i class="fa-solid fa-wind"></i>
+            <h3>Suggested Activities</h3>
+            <h4>Suggseted activities are the below: <span class="bolded">{{ activities }}</span>.</h4>
+          </div>
+        </div>
+      </div>
+      <hr>
+      {% block zip %}
+      {% endblock %}
+      <br>
+      <br>
+      
+    <footer>
+      <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>&copy; 2023 home</p>
+      </div>
+    </footer>
+  </body>
+</html>
